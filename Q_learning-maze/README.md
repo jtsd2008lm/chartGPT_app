@@ -4,7 +4,7 @@
 
 用一个 小机器人走出迷宫 的问题来 学习这个算法，如下图 有0-5个房间（最外面是5号房间），机器人开始时位于任意一个房间，找到走到5号房间的最优路径。
 
-![](E:\chartGPT_app\Q_learning-maze\images\1.png)
+![](images\1.png)
 
 Q-learning算法中有几个基本概念
 
@@ -12,7 +12,7 @@ Q-learning算法中有几个基本概念
 
 行为 Action：从一个房间转移到另一个房间作为一个行为
 
-![](E:\chartGPT_app\Q_learning-maze\images\2.png)
+![](images\2.png)
 
 以状态为行，行为是列，构造一个二维矩阵 Reward 用于定义房间之间的关系，能走到5号房间奖励为1，不能走到某房间奖励为-1，能走到某房间奖励为0。
 
@@ -30,25 +30,25 @@ Q-learning算法中有几个基本概念
 
 最后的答案如下图：
 
-![](E:\chartGPT_app\Q_learning-maze\images\3.png)
+![](images\3.png)
 
- ![](E:\chartGPT_app\Q_learning-maze\images\4.png)
+ ![](images\4.png)
 
 例如从2号房间出发，最佳路径应该是 2-3-1-5
 
 一开始我想自己写这个训练代码，但是对这个强化学习概念不熟，对python也不熟。还是问c老师吧。
 
-![](E:\chartGPT_app\Q_learning-maze\images\5.png)
+![](images\5.png)
 
 c老师写的衰减因子gamma是0.95，文章里是0.8
 
 c老师给的公式和文章里的不一样。为啥？
 
-![](E:\chartGPT_app\Q_learning-maze\images\6.png)
+![](images\6.png)
 
 结果正确（到达5号房间后就停止了）：
 
-![](E:\chartGPT_app\Q_learning-maze\images\7.png)
+![](images\7.png)
 
 代码：
 
